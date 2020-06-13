@@ -1,14 +1,14 @@
 {
   "name": "mongo01",
   "version": 2,
-  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
+  "builds": [{ "src": "/server/index.js", "use": "@now/node-server" }],
   "env": {
     "MONGODB_URI": "@my-mongodb-uri"
   },
   "routes": [
     {
       "src": ".*",
-      "dest": "/index.js",
+      "dest": "/server/index.js",
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
@@ -18,7 +18,7 @@
     },
     {
       "src": "/api/books/(.*)",
-      "dest": "/index.js"
+      "dest": "/server/index.js"
     }
   ]
 }
