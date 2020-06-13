@@ -1,5 +1,5 @@
 {
-  "name": "mongo01",
+  "name": "mern00",
   "version": 2,
   "builds": [{ "src": "/server/index.js", "use": "@now/node-server" }],
   "env": {
